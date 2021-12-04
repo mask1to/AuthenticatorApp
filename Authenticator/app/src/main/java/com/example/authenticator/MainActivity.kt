@@ -2,10 +2,17 @@ package com.example.authenticator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.Navigation
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }a
-}aa
+    }
+
+    override fun onSupportNavigateUp(): Boolean
+    {
+        return Navigation.findNavController(this, R.id.nav_host_fragment).navigateUp()
+    }
+}
