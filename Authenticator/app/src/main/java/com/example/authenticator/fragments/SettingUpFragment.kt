@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.airbnb.lottie.LottieAnimationView
 import com.example.authenticator.R
 
@@ -20,6 +21,7 @@ class SettingUpFragment : Fragment()
 {
 
     private lateinit var continueBtn : Button
+    private lateinit var backButton: Button
     private lateinit var secondAnim : LottieAnimationView
     private lateinit var txtView : TextView
     private lateinit var userEmail : EditText
@@ -44,6 +46,7 @@ class SettingUpFragment : Fragment()
     {
         super.onViewCreated(view, savedInstanceState)
         continueBtn = view.findViewById(R.id.firstButton)
+        backButton = view.findViewById(R.id.backButton)
         secondAnim = view.findViewById(R.id.secondAnimation)
         txtView = view.findViewById(R.id.textView)
         userEmail = view.findViewById(R.id.emailField)
@@ -60,8 +63,14 @@ class SettingUpFragment : Fragment()
             }
             else
             {
-                showToast("another email")
+                showToast("another emailaaaa")
             }
+        }
+
+        backButton.setOnClickListener {
+            val action = SettingUpFragmentDirections.fromSettingUpFragmentToIntroFragment()
+            view.findNavController().navigate(action)
+
         }
 
         secondAnim.repeatCount = Animation.INFINITE

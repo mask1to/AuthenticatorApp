@@ -15,6 +15,10 @@
     <fragment
         android:id="@+id/settingUpFragment"
         android:name="com.example.authenticator.fragments.SettingUpFragment"
-        android:label="SettingUpFragment" />
+        android:label="SettingUpFragment" >
+        <action
+            android:id="@+id/fromSettingUpFragmentToIntroFragment"
+            app:destination="@id/introFragment" />
+    </fragment>
 
 </navigation>
