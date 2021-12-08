@@ -16,14 +16,17 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.airbnb.lottie.LottieAnimationView
 import com.example.authenticator.R
+import com.example.authenticator.database.ConnectionHelper
 
 class IntroFragment : Fragment()
 {
-
     private var progressDialog: ProgressDialog? = null
     private lateinit var mainButton : Button
+    private lateinit var test : Button
     private lateinit var headingView: ImageView
     private lateinit var mainAnimation : LottieAnimationView
+    private lateinit var connectionHelper : ConnectionHelper
+
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
@@ -46,12 +49,19 @@ class IntroFragment : Fragment()
 
         mainAnimation = view.findViewById(R.id.mainAnimation)
         mainButton = view.findViewById(R.id.mainBtn)
+        test = view.findViewById(R.id.mainBtn2)
 
         mainButton.setOnClickListener {
             val action = IntroFragmentDirections.fromIntroFragmentToSettingUpFragment()
             view.findNavController().navigate(action)
 
         }
+
+        //TODO
+        test.setOnClickListener {
+            connectionHelper = ConnectionHelper()
+        }
+
 
         //mainAnimation.repeatCount = Animation.INFINITE
     }
@@ -81,4 +91,5 @@ class IntroFragment : Fragment()
     }
 
     private fun showToast(message : String) = Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
+
 }
