@@ -8,8 +8,8 @@ Building a new Authenticator application for Android users</br>
 
 
 ## What is implemented ?
- - [x] TBA
- - [x] TBA
+ - [x] Cloud Messaging via Firebase
+ - [x] TBD
 
 
  ## Notes
