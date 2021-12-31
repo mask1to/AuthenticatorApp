@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "456708576643",
+    "project_id": "authenticator-e9a0c",
+    "storage_bucket": "authenticator-e9a0c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456708576643:android:c5429841ae599d883752b6",
+        "android_client_info": {
+          "package_name": "com.example.authenticator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456708576643-j12bha3sah7th938uuvpi9074sesvsug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKOv6fACeSxa9JmHn9gbmFEijkcN8Kl3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456708576643-j12bha3sah7th938uuvpi9074sesvsug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
