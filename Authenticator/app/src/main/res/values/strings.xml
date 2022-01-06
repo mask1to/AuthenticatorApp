@@ -3,4 +3,5 @@
     <string name="add_account">Add account</string>
     <string name="enter_your_e_mail_address">Enter your e-mail address</string>
     <string name="continue_btn">Continue</string>
+    <string name="msg_token_fmt" />
 </resources>
